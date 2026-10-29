@@ -1,0 +1,171 @@
+6. Develop an Android application demonstrating communication between Activity and Fragment. 
+ 
+Theory 
+An Activity acts as the main entry point of an Android application, while a Fragment represents a reusable portion 
+of the user interface. 
+Communication between an Activity and a Fragment can occur in two ways: 
+1. Activity → Fragment: Data is passed using a Bundle.  
+2. Fragment → Activity: Data is sent back using an interface callback implemented by the Activity.  
+This approach promotes modular, reusable, and maintainable Android applications. 
+Add blank fragment as added in the last practical. 
+ 
+
+--------------------------------------------------------------------
+Activity_main.xml→ 
+---------------------------------------------------------------------
+
+?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:background="@color/cyan" 
+    android:orientation="vertical" 
+    android:padding="16dp"> 
+ 
+    <TextView 
+        android:id="@+id/txtActivity" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="Message gets display here once received from fragment" 
+        android:textSize="20sp" 
+        android:padding="10dp"/> 
+ 
+    <FrameLayout 
+        android:id="@+id/fragment_container" 
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"/> 
+</LinearLayout> 
+ 
+ -------------------------------------------------------------------------
+Mainactivity.java→ 
+-------------------------------------------------------------------------
+package com.example.pract6; 
+import androidx.appcompat.app.AppCompatActivity; 
+import android.os.Bundle; 
+import android.widget.TextView; 
+ 
+public class MainActivity extends AppCompatActivity 
+        implements MessageFragment.OnMessageListener { 
+ 
+    TextView txtActivity; 
+ 
+    @Override 
+    protected void onCreate(Bundle savedInstanceState) { 
+        super.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_main); 
+        txtActivity = findViewById(R.id.txtActivity); 
+ 
+        // Create Fragment 
+        MessageFragment fragment = new MessageFragment(); 
+ 
+        // Pass data to Fragment 
+
+ 
+        Bundle bundle = new Bundle(); 
+        bundle.putString("message", "Hello Fragment!"); 
+        fragment.setArguments(bundle); 
+ 
+        getSupportFragmentManager() 
+                .beginTransaction() 
+                .replace(R.id.fragment_container, fragment) 
+                .commit(); 
+    } 
+ 
+    // Receive message from Fragment 
+    @Override 
+    public void onMessageReceived(String message) { 
+        txtActivity.setText(message); 
+    } 
+} 
+ 
+ ----------------------------------------------------------------------------
+messagefragment.xml→ 
+----------------------------------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:background="@color/light" 
+    android:gravity="center" 
+    android:orientation="vertical"> 
+ 
+    <TextView 
+        android:id="@+id/txtFragment" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textSize="22sp"/> 
+ 
+    <Button 
+        android:id="@+id/btnSend" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="Send Message to Activity"/> 
+ 
+</LinearLayout> 
+ 
+ ----------------------------------------------------------------------------
+messageFragment.java→ 
+----------------------------------------------------------------------------
+
+package com.example.pract6; 
+ 
+import android.content.Context; 
+import android.os.Bundle; 
+import android.view.LayoutInflater; 
+import android.view.View; 
+import android.view.ViewGroup; 
+import android.widget.Button; 
+import android.widget.TextView; 
+import androidx.annotation.NonNull; 
+import androidx.fragment.app.Fragment; 
+ 
+public class MessageFragment extends Fragment { 
+  
+    TextView txtFragment; 
+    Button btnSend; 
+ 
+    OnMessageListener listener; 
+ 
+    // Interface 
+    public interface OnMessageListener { 
+        void onMessageReceived(String message); 
+    } 
+ 
+    @Override 
+    public void onAttach(@NonNull Context context) { 
+        super.onAttach(context); 
+ 
+        if (context instanceof OnMessageListener) { 
+            listener = (OnMessageListener) context; 
+        } 
+    } 
+ 
+    @Override 
+    public View onCreateView(LayoutInflater inflater, 
+                             ViewGroup container, 
+                             Bundle savedInstanceState) { 
+ 
+        View view = inflater.inflate( 
+                R.layout.fragment_message, 
+                container, 
+                false); 
+ 
+        txtFragment = view.findViewById(R.id.txtFragment); 
+        btnSend = view.findViewById(R.id.btnSend); 
+ 
+        // Receive data from Activity 
+        Bundle bundle = getArguments(); 
+ 
+        if (bundle != null) { 
+            txtFragment.setText(bundle.getString("message")); 
+        } 
+ 
+        // Send data back to Activity 
+        btnSend.setOnClickListener(v -> { 
+            listener.onMessageReceived( 
+                    "Hello Activity! Message received from Fragment."); 
+        }); 
+ 
+        return view; 
+    } 
+} 

@@ -1,0 +1,169 @@
+2. Develop an Android application demonstrating the use of Programming Resources (colors.xml, themes.xml, 
+strings.xml, dimens.xml, drawable resources) and apply them in UI components.  
+Color resource : 
+ --------------------------------------------------------------------------------
+colors.xml as follow→ 
+-----------------------------------------------------------------------------
+
+<?xml version="1.0" encoding="utf-8"?> 
+<resources> 
+<color name="colorPrimary">#008577</color> 
+<color name="colorPrimaryDark">#00574B</color> 
+<color name="colorAccent">#D81B60</color> 
+<color name="red">#FF0000</color> 
+<color name="blue">#0000FF</color> 
+<color name="green">#00FF00</color> 
+</resources> 
+
+----------------------------------------------------------------------------- 
+Activity_main.xml→ 
+---------------------------------------------------------------------------
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:orientation="vertical" 
+    android:background="@color/green" 
+    tools:context=".MainActivity"> 
+ 
+<TextView 
+        android:id="@+id/textView" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textSize="30dp" 
+        android:text="This is blue color" 
+        android:textColor="@color/blue"/> 
+ 
+<TextView 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="This is red color!" 
+        android:textSize="30dp" 
+        android:textColor="@color/red" 
+         /> 
+</LinearLayout> 
+------------------------------------------------------------
+Dimension Resource: 
+ ------------------------------------------------------------
+dimens.xml → 
+<?xml version="1.0" encoding="utf-8"?> 
+<resources> 
+<dimen name="height">35dp</dimen> 
+<dimen name="width">150dp</dimen> 
+<dimen name="size">20dp</dimen> 
+</resources> 
+ 
+Activity_main.xml→ 
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout     
+xmlns:android="http://schemas.android.com/apk/res/android"     
+xmlns:app="http://schemas.android.com/apk/res-auto"     
+xmlns:tools="http://schemas.android.com/tools"     
+android:layout_width="match_parent"     
+android:layout_height="match_parent"     
+android:orientation="vertical"     
+tools:context=".MainActivity">  
+<TextView         
+android:layout_width="wrap_content"         
+android:layout_height="wrap_content"          
+android:text="this is nornal text"/> 
+ 
+<TextView         
+android:layout_width="@dimen/width"         
+android:layout_height="@dimen/height"          
+android:textSize="@dimen/size"         
+android:text="this is text with user defined dimentions"/>  
+</LinearLayout> 
+
+
+Drawable Resource: 
+1) First create minimum 2images in paint brush. Save at desired location. 
+2) Open file explorer ,go to the desired location, copy that images and paste the images by right click on 
+drawable directory under res. [i.e. app→res→drawable] in android studio. 
+ -------------------------------------------------------------------------------
+Activity_main.xml→ 
+---------------------------------------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:orientation="vertical" 
+    tools:context=".MainActivity"> 
+ 
+<ImageView 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"  
+        android:src="@drawable/Untitled"/> 
+<ImageView 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"  
+        android:src="@drawable/Untitled1"/> 
+</LinearLayout> 
+ 
+String Resources: 
+ 
+ ----------------------------------------------------------------------------
+To open strings.xml file : 
+app→res→values→strings.xml 
+ 
+write code as follow in strings.xml → 
+-------------------------------------------------------------------------------
+<resources> 
+<string name="app_name">ResourcesDemo</string> 
+<string name="Heading">Android Programming</string> 
+<string name="History"> 
+  The history and versions of android are interesting to know. The code names of android ranges from A to J 
+currently, such as Aestro, Blender, Cupcake, Donut, Eclair, Froyo, Gingerbread, Honeycomb, Ice Cream Sandwitch, 
+Jelly Bean, KitKat and Lollipop.  Let's understand the android history in a sequence. Initially, Andy Rubin founded 
+Android Incorporation in Palo Alto,California, United States in October, 2003.In 17th August 2005, 
+        Google acquired android Incorporation. Since then, it is in the subsidiary of Google Incorporation. 
+</string> 
+</resources> 
+ 
+ 
+ -------------------------------------------------------------------------
+Activity_main.xml→ 
+------------------------------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:orientation="vertical" 
+    tools:context=".MainActivity"> 
+ 
+<TextView 
+        android:id="@+id/textView" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textSize="30dp" 
+        android:text="@string/Heading" 
+        android:textColor="@color/red"/> 
+ 
+<TextView android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="@string/History" 
+        android:textSize="20dp" 
+        android:textColor="@color/blue" 
+         /> 
+</LinearLayout> 
+ 
+Theme resourse 
+---------------------------------------------------------------------------
+Theme.xml→ 
+-----------------------------------------------------------------------------
+<resources xmlns:tools="http://schemas.android.com/tools"> 
+    <!-- Base application theme. --> 
+    <style name="Base.Theme.Pract7" parent="Theme.Material3.DayNight"> 
+    </style> 
+ 
+    <style name="Theme.Pract7" parent="Base.Theme.Pract7" /> 
+</resources>  
+ 

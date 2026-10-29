@@ -1,0 +1,86 @@
+13. Develop an Android application implementing AppBar (Toolbar) and Options Menu.
+
+NOTE:
+1) No change in activity XML file.
+2) Change themes.xml for the mentioned line only:
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Pract16" parent="Theme.Material3.DayNight">
+    </style>
+
+    <style name="Theme.Pract16" parent="Base.Theme.Pract16" />
+</resources>
+
+
+Create mymenu.xml file as follows:
+
+Right-click on res → New → New Resource File
+
+Name: mymenu
+Resource type: menu
+Root element: menu
+
+
+mymenu.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/r1"
+        android:title="Red" />
+
+    <item
+        android:id="@+id/g1"
+        android:title="Green" />
+
+    <item
+        android:id="@+id/b1"
+        android:title="Blue" />
+
+</menu>
+
+
+Java file — MainActivity.java
+
+package com.example.pract16;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    View view;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        view = findViewById(android.R.id.content);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.r1) {
+            view.setBackgroundColor(Color.RED);
+        } else if (item.getItemId() == R.id.g1) {
+            view.setBackgroundColor(Color.GREEN);
+        } else if (item.getItemId() == R.id.b1) {
+            view.setBackgroundColor(Color.BLUE);
+        }
+
+        return true;
+    }
+}

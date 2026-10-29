@@ -1,0 +1,58 @@
+3. Develop an Android application demonstrating complete Activity Lifecycle methods and analyze execution 
+using Logcat. 
+--------------------------------------------------------------------------
+MainActivity.java → 
+------------------------------------------------------------------------
+ 
+Note: To add following lifecycle methods , right click in mainactivity.java file and select Generate→override 
+methods OR shortcut key is “CTRL+O”. 
+ 
+package com.example.mahesh.practno3a; 
+import android.support.v7.app.AppCompatActivity; 
+import android.os.Bundle; 
+import android.util.Log; 
+ 
+public class MainActivity extends AppCompatActivity 
+{ 
+String tag="LifeCycle"; 
+ 
+    @Override 
+    protected void onCreate(Bundle savedInstanceState) 
+    { 
+        super.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_main); 
+        Log.d(tag,"oncreate()"); 
+ 
+    } 
+    public void onStart() 
+    { 
+        super.onStart(); 
+        Log.d(tag,"onstart()"); 
+    } 
+    public void onRestart() 
+    { 
+        super.onRestart(); 
+        Log.d(tag,"onrestart()"); 
+    } 
+    public void onResume() 
+    { 
+        super.onResume(); 
+        Log.d(tag,"onresume()"); 
+    } 
+    public void onPause() 
+    { 
+        super.onPause(); 
+        Log.d(tag,"onpause()"); 
+    } 
+    public void onStop() 
+    { 
+        super.onStop(); 
+        Log.d(tag,"onstop()"); 
+    } 
+    public void onDestroy() 
+    { 
+        super.onDestroy(); 
+        Log.d(tag,"ondestroy()"); 
+    } 
+} 
+
