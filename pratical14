@@ -1,6 +1,7 @@
 14. Develop an Android application implementing contextual menus and popup menus.
-
-1. activity_main.xml
+-------------------------------------------------------------------------------------------------------
+1. activity_main.xml             app → res → layout → activity_main.xml (auto-created)
+-----------------------------------------------------------------------------------------------
 
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -37,8 +38,9 @@ Name: mymenu
 Resource type: menu
 Root element: menu
 
-
+-----------------------------------------------------------------------------------------
 context_menu.xml
+------------------------------------------------------------------------------------------
 
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -50,8 +52,9 @@ context_menu.xml
         android:title="green" />
 </menu>
 
-
-popup_menu.xml
+-------------------------------------------------------------------------------------------------
+popup_menu.xml                                                    app → res → menu → popup_menu.xml (created)
+---------------------------------------------------------------------------------------------------------
 
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -63,8 +66,9 @@ popup_menu.xml
         android:title="Dancing" />
 </menu>
 
-
-3. MainActivity.java
+--------------------------------------------------------------------------------------------------------
+3. MainActivity.java                       app → java → com.example.pract18 → MainActivity.java (auto-created)
+----------------------------------------------------------------------------------------------------------
 
 package com.example.pract18;
 
