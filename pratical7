@@ -1,6 +1,6 @@
 7. Develop an Android application using LinearLayout (Horizontal and Vertical) to design structured UI.  
 ------------------------------------------------------------------------------
-Activity_main.xml→ 
+Activity_main.xml→                                app → res → layout → activity_main.xml (auto-created)
 --------------------------------------------------------------------------------
  
 <?xml version="1.0" encoding="utf-8"?> 
@@ -56,8 +56,7 @@ Activity_main.xml→
             android:layout_width="0dp" 
             android:layout_height="wrap_content" 
 
-===== PAGE 16 =====
-Page 16 of 73 
+
  
             android:layout_weight="1" 
             android:hint="Enter Email"/> 
@@ -108,7 +107,7 @@ Page 16 of 73
 </LinearLayout> 
  
 --------------------------------------------------------------------
-Mainactivity.java→ 
+Mainactivity.java→                     app → java → com.example.pract7 → MainActivity.java (auto-created)
 -----------------------------------------------------------------------
 
 package com.example.pract7; 
@@ -146,6 +145,10 @@ public class MainActivity extends AppCompatActivity {
             etPhone.setText(""); 
  
         }); 
+
+
+activity_main.xml
+android:inputType="textPersonName"
  
     } 
 } 
