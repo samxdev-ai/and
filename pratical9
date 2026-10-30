@@ -1,6 +1,6 @@
 9. Develop an Android application using TableLayout to design a structured Login/Registration Form.
  -----------------------------------------------------------------------------------
-Activity_main.xml 
+Activity_main.xml                                       app → res → layout → activity_main.xml (auto-created)
 ---------------------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android" 
