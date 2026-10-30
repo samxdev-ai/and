@@ -1,8 +1,8 @@
-================================================================================
 15. Develop an Android app that performs basic Arithmetic operations.
-================================================================================
 
-1. activity_main.xml
+-----------------------------------------------------------------------------------
+1. activity_main.xml            app → res → layout → activity_main.xml (auto-created)
+-----------------------------------------------------------------------------------
 
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -60,8 +60,9 @@
 
 </LinearLayout>
 
-
-2. MainActivity.java
+-------------------------------------------------------------------------------------------------------
+2. MainActivity.java            app → java → com.example.arithmetic → MainActivity.java (auto-created)
+------------------------------------------------------------------------------------------------------
 
 package com.example.arithmetic;
 
