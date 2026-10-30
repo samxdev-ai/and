@@ -1,6 +1,8 @@
 12. Develop an Android application using ListView with ArrayAdapter and implement item click handling.
 
-Activity_Main.xml
+------------------------------------------------------------------------------------------
+Activity_Main.xml                           app → res → layout → activity_main.xml (auto-created)
+------------------------------------------------------------------------------------------------
 
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
@@ -19,8 +21,9 @@ Activity_Main.xml
 
 </android.support.constraint.ConstraintLayout>
 
-
-MainActivity.java
+----------------------------------------------------------------------------------------------------------------
+MainActivity.java                            app → java → com.anu.listviewdemo → MainActivity.java (auto-created)
+-----------------------------------------------------------------------------------------------------------------
 
 package com.anu.listviewdemo;
 
