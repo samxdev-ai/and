@@ -4,6 +4,9 @@ NOTE:
 1) No change in activity XML file.
 2) Change themes.xml for the mentioned line only:
 
+---------------------------------------------------------------------------------------------
+ themes.xml                              app → res → values → themes.xml (auto-created)
+----------------------------------------------------------------------------------------------
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.Pract16" parent="Theme.Material3.DayNight">
     </style>
@@ -20,8 +23,9 @@ Name: mymenu
 Resource type: menu
 Root element: menu
 
-
-mymenu.xml
+-------------------------------------------------------------------------------------------------------
+mymenu.xml                                           app → res → menu → mymenu.xml (created)
+-----------------------------------------------------------------------------------------------------
 
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -42,6 +46,10 @@ mymenu.xml
 
 
 Java file — MainActivity.java
+---------------------------------------------------------------------------------------------------------------
+MainActivity.java                                   app → java → com.example.pract16 → MainActivity.java
+----------------------------------------------------------------------------------------------------------------
+
 
 package com.example.pract16;
 
