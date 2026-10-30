@@ -1,9 +1,12 @@
 2. Develop an Android application demonstrating the use of Programming Resources (colors.xml, themes.xml, 
 strings.xml, dimens.xml, drawable resources) and apply them in UI components.  
 Color resource : 
+
+
+
  --------------------------------------------------------------------------------
-colors.xml as follow→ 
------------------------------------------------------------------------------
+colors.xml as follow→                             app → res → values → colors.xml
+------------------------- ----------------------------------------------------
 
 <?xml version="1.0" encoding="utf-8"?> 
 <resources> 
@@ -15,8 +18,9 @@ colors.xml as follow→
 <color name="green">#00FF00</color> 
 </resources> 
 
+
 ----------------------------------------------------------------------------- 
-Activity_main.xml→ 
+Activity_main.xml→                      app → res → layout → activity_main.xml
 ---------------------------------------------------------------------------
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android" 
@@ -44,8 +48,10 @@ Activity_main.xml→
         android:textColor="@color/red" 
          /> 
 </LinearLayout> 
+
+
 ------------------------------------------------------------
-Dimension Resource: 
+Dimension Resource:         app → res → values → dimens.xml 
  ------------------------------------------------------------
 dimens.xml → 
 <?xml version="1.0" encoding="utf-8"?> 
@@ -82,8 +88,9 @@ Drawable Resource:
 1) First create minimum 2images in paint brush. Save at desired location. 
 2) Open file explorer ,go to the desired location, copy that images and paste the images by right click on 
 drawable directory under res. [i.e. app→res→drawable] in android studio. 
+
  -------------------------------------------------------------------------------
-Activity_main.xml→ 
+Activity_main.xml→                        app → res → drawable(folder create) ->image(put2)
 ---------------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <LinearLayout 
@@ -108,8 +115,7 @@ Activity_main.xml→
 String Resources: 
  
  ----------------------------------------------------------------------------
-To open strings.xml file : 
-app→res→values→strings.xml 
+To open strings.xml file :                      app→res→values→strings.xml 
  
 write code as follow in strings.xml → 
 -------------------------------------------------------------------------------
@@ -125,9 +131,10 @@ Android Incorporation in Palo Alto,California, United States in October, 2003.In
 </string> 
 </resources> 
  
- 
+
+
  -------------------------------------------------------------------------
-Activity_main.xml→ 
+Activity_main.xml→                  app → res → layout → activity_main.xml
 ------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <LinearLayout 
@@ -156,8 +163,10 @@ Activity_main.xml→
 </LinearLayout> 
  
 Theme resourse 
+
+
 ---------------------------------------------------------------------------
-Theme.xml→ 
+Theme.xml→                            app → res → values → themes.xml
 -----------------------------------------------------------------------------
 <resources xmlns:tools="http://schemas.android.com/tools"> 
     <!-- Base application theme. --> 
