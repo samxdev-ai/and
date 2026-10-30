@@ -1,6 +1,9 @@
 Question 17
 Develop an Android application implementing SQLite database CRUD operations.
-activity_main.xml
+---------------------------------------------------------------------------------------------
+activity_main.xml                app → res → layout → activity_main.xml (auto-created)
+------------------------------------------------------------------------------------------
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -54,7 +57,9 @@ activity_main.xml
  
 </LinearLayout>
 
-DBHelper.java
+-----------------------------------------------------------------------------------------------------------
+DBHelper.java                app → java → com.example.pract25 → DBHelper.java (created)
+------------------------------------------------------------------------------------------------------------
 package com.example.pract25;
  
 import android.content.ContentValues;
@@ -109,7 +114,10 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 }
 
-MainActivity.java
+--------------------------------------------------------------------------------------
+MainActivity.java                app → java → com.example.pract25 → MainActivity.java (auto-created)
+---------------------------------------------------------------------------------------
+
 package com.example.pract25;
  
 import androidx.appcompat.app.AppCompatActivity;
