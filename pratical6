@@ -11,7 +11,7 @@ Add blank fragment as added in the last practical.
  
 
 --------------------------------------------------------------------
-Activity_main.xml→ 
+Activity_main.xml→                               app → res → layout → fragment_message.xml (auto-created)
 ---------------------------------------------------------------------
 
 ?xml version="1.0" encoding="utf-8"?> 
@@ -37,7 +37,7 @@ Activity_main.xml→
 </LinearLayout> 
  
  -------------------------------------------------------------------------
-Mainactivity.java→ 
+Mainactivity.java→                             app → java → com.example.pract6 → MainActivity.java (auto-created)
 -------------------------------------------------------------------------
 package com.example.pract6; 
 import androidx.appcompat.app.AppCompatActivity; 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
 } 
  
  ----------------------------------------------------------------------------
-messagefragment.xml→ 
+messagefragment.xml→                      app → res → layout → activity_main.xml (auto-created)
 ----------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
@@ -104,7 +104,7 @@ messagefragment.xml→
 </LinearLayout> 
  
  ----------------------------------------------------------------------------
-messageFragment.java→ 
+messageFragment.java→                           app → java → com.example.pract6 → MessageFragment.java (created)
 ----------------------------------------------------------------------------
 
 package com.example.pract6; 
