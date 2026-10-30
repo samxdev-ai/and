@@ -1,7 +1,11 @@
 Question 18
 Activity to Activity data sharing.
 Add one new Empty Views Activity named SecondActivity (Right-click the app > New > Activity > Empty Views Activity > name it SecondActivity > Finish).
-activity_main.xml
+
+----------------------------------------------------------------------------------------------------
+activity_main.xml                app → res → layout → activity_main.xml (auto-created)
+-------------------------------------------------------------------------------------
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,7 +28,9 @@ activity_main.xml
  
 </LinearLayout>
 
-MainActivity.java (First Activity)
+---------------------------------------------------------------------------------------------------
+MainActivity.java (First Activity)        app → java → com.example.myapp → MainActivity.java (auto-created)
+------------------------------------------------------------------------------------------------------
 package com.example.myapp;
  
 import android.content.Intent;
@@ -54,8 +60,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+----------------------------------------------------------------------------------------
+activity_second.xml            app → res → layout → activity_second.xml (auto-created)
+-------------------------------------------------------------------------------------------
 
-activity_second.xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -72,7 +80,10 @@ activity_second.xml
  
 </LinearLayout>
 
-SecondActivity.java (Second Activity)
+-------------------------------------------------------------------------------------------------
+SecondActivity.java (Second Activity)    app → java → com.example.myapp → SecondActivity.java (created)    
+
+--------------------------------------------------------------------------------------------------
 package com.example.myapp;
  
 import android.os.Bundle;
