@@ -1,0 +1,149 @@
+3. Develop an Android application demonstrating complete Activity Lifecycle methods and analyze execution 
+using Logcat. 
+--------------------------------------------------------------------------
+MainActivity.java →                      app → java → com.example.mahesh.practno3 → MainActivity.java
+------------------------------------------------------------------------
+ 
+Note: To add following lifecycle methods , right click in mainactivity.java file and select Generate→override 
+methods OR shortcut key is “CTRL+O”. 
+ 
+package com.example.mahesh.practno3a; 
+import android.support.v7.app.AppCompatActivity; 
+import android.os.Bundle; 
+import android.util.Log; 
+ 
+public class MainActivity extends AppCompatActivity 
+{ 
+String tag="LifeCycle"; 
+ 
+    @Override 
+    protected void onCreate(Bundle savedInstanceState) 
+    { 
+        super.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_main); 
+        Log.d(tag,"oncreate()"); 
+ 
+    } 
+    public void onStart() 
+    { 
+        super.onStart(); 
+        Log.d(tag,"onstart()"); 
+    } 
+    public void onRestart() 
+    { 
+        super.onRestart(); 
+        Log.d(tag,"onrestart()"); 
+    } 
+    public void onResume() 
+    { 
+        super.onResume(); 
+        Log.d(tag,"onresume()"); 
+    } 
+    public void onPause() 
+    { 
+        super.onPause(); 
+        Log.d(tag,"onpause()"); 
+    } 
+    public void onStop() 
+    { 
+        super.onStop(); 
+        Log.d(tag,"onstop()"); 
+    } 
+    public void onDestroy() 
+    { 
+        super.onDestroy(); 
+        Log.d(tag,"ondestroy()"); 
+    } 
+} 
+
+
+
+
+this the the new version of it 
+
+package com.example.mahesh.practno3a;
+
+import android.os.Bundle;
+import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    String tag = "LifeCycle";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Log.d(tag, "oncreate()");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(tag, "onstart()");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(tag, "onrestart()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(tag, "onresume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(tag, "onpause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(tag, "onstop()");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(tag, "ondestroy()");
+    }
+}
+
+
+-----------------------------------------------------------------------------------------
+new version of the activity_main.xml                app → res → layout → activity_main.xml
+--------------------------------------------------------------------------------------------
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Lifecycle Demo"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#008577" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Logcat to view lifecycle methods"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
+
+</LinearLayout>
