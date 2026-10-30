@@ -1,6 +1,9 @@
 Question 16
 Develop an Android application implementing Explicit and Implicit Intents.
-activity_main.xml
+-----------------------------------------------------------------------------------------
+activity_main.xml                app → res → layout → activity_main.xml (auto-created)
+--------------------------------------------------------------------------------------
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,10 +27,11 @@ activity_main.xml
         android:layout_marginTop="20dp"/>
  
 </LinearLayout>
-
+-----------------------------------------------------------------------------------------------------------
 Create SecondActivity
-Right-click the app, then New > Activity > Empty Views Activity, name it SecondActivity, and click OK.
-activity_second.xml
+------------------------------------------------------------------------------------------------------
+activity_second.xml                    app → res → layout → activity_second.xml (auto-created)
+-------------------------------------------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -43,10 +47,15 @@ activity_second.xml
         android:textSize="24sp"/>
  
 </LinearLayout>
-
-SecondActivity.java
+---------------------------------------------------------------------------------------------
+SecondActivity.java                app → java → com.example.pract19 → SecondActivity.java (created)
+--------------------------------------------------------------------------------------------
 No change.
-MainActivity.java
+
+-----------------------------------------------------------------------------------------------
+MainActivity.java            app → java → com.example.pract19 → MainActivity.java (auto-created)
+------------------------------------------------------------------------------------------------
+
 package com.example.pract19;
  
 import android.content.Intent;
