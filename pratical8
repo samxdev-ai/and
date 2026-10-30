@@ -1,6 +1,6 @@
 8. Develop an Android application using RelativeLayout to align UI components dynamically. 
 -------------------------------------------------------------------------------
-Activity_main.xml 
+Activity_main.xml                    app → res → layout → activity_main.xml (auto-created)
 -----------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
