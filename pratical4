@@ -1,10 +1,18 @@
 4. Develop an Android application to create and integrate a Fragment and demonstrate Fragment lifecycle 
 methods.  
 Create a new file as follow: 
+
+
  
-Right click app→new→Android Resource File→Name it as Lifeoffragment→click ok. 
+Lifeoffragment.java file as follow:-                                app → java → com.example.mahesh.practno3b
+                                                                    How to create:
+                                                                    1. Right-click com.example.mahesh.practno3b.
+                                                                    2. Click New → Java Class.
+                                                                    3. Enter LifeOfFragment.
+                                                                    4. Press Enter.
+---------------------------------------------------------------------------------------------
  
-Lifeoffragment.java file as follow:- 
+
  
 package com.example.mahesh.practno3b; 
 import android.content.Context; 
@@ -106,10 +114,20 @@ super.onResume();
         Log.d(tag,"on resume"); 
     } 
 } 
- 
+
+
+
+
+
+fragment_life_of.xml file as follow:-                    app → res → layout->1. Right-click the layout folder.
+                                                        2. Click New → Layout Resource File.
+                                                        3. File name: fragment_life_of
+                                                        4. Root element: FrameLayout
+                                                        5. Click OK.
+
 ------------------------------------------------------
  
-fragment_life_of.xml file as follow:- 
+
 <?xml version="1.0" encoding="utf-8"?> 
 <FrameLayout 
     xmlns:android="http://schemas.android.com/apk/res/android" 
@@ -127,7 +145,7 @@ fragment_life_of.xml file as follow:-
 </FrameLayout> 
  
  
-Activity_main.xml file as follow:- 
+Activity_main.xml file as follow:-                       app → res → layout->activity_main.xml
 -------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <android.support.constraint.ConstraintLayout 
