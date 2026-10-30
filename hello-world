@@ -1,3 +1,7 @@
+1.Develop a simple "hello world" app demonstrating project creation,android studio interfacce 
+android component , avd creation and application execution
+
+
 Navigate to app > src > main > res > layout > activity_main.xml and replace its contents with:
 -------------------------------------------------------------------------------------
 . Layout File: activity_main.xml
