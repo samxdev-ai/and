@@ -1,6 +1,6 @@
 11. Develop an Android application using AbsoluteLayout demonstrating fixed positioning. 
 ----------------------------------------------------------------------
-Activity_main.xml 
+Activity_main.xml                              app → res → layout → activity_main.xml (auto-created)
 ----------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
  
