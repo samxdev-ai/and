@@ -2,8 +2,10 @@
 Steps: 
 1) Create 2 fragments named FirstFragment and SecondFragment 
 2) Right clk on App→new→fragment→fragment(blank) 
- 
-Activity_main.xml→ 
+
+----------------------------------------------------------------------------------------------------------
+Activity_main.xml→                          app → res → layout → fragment_first.xml
+------------------------------------------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <FrameLayout 
     xmlns:android="http://schemas.android.com/apk/res/android" 
@@ -28,8 +30,9 @@ fragment_first.xml→
         android:text="go tosecond fragment"/> 
 </LinearLayout> 
  
- 
-fragment_second.xml→ 
+ -----------------------------------------------------------------------------------------------------
+fragment_second.xml→                 app → res → layout → fragment_second.xml
+---------------------------------------------------------------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?> 
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android" 
@@ -44,8 +47,10 @@ fragment_second.xml→
         android:layout_height="wrap_content" 
         android:text="back to first fragment"/> 
 </LinearLayout> 
-  
-Mainactivity.java→ 
+
+----------------------------------------------------------------------------------------------------------
+Mainactivity.java→                                       app → java → com.example.myapplication → MainActivity.java
+-----------------------------------------------------------------------------------------------------------
 package com.example.myapplication; 
 import android.os.Bundle; 
 import androidx.activity.EdgeToEdge; 
@@ -68,8 +73,10 @@ public class MainActivity extends AppCompatActivity {
         } 
     } 
 } 
- 
-firstfragment.java→ 
+
+-------------------------------------------------------------------------------------------------
+firstfragment.java→              app → java → com.example.myapplication → FirstFragment.java (created)
+-----------------------------------------------------------------------------------------------
 change the code of onCreateView() rest code as it is. 
 @Override 
 public View onCreateView(LayoutInflater inflater, ViewGroup container, 
@@ -82,8 +89,10 @@ getParentFragmentManager().beginTransaction().replace(R.id.fc,new
 SecondFragment()).addToBackStack(null).commit();     } ); 
     return v; 
 } 
- 
-Secondfragment.java→ 
+
+--------------------------------------------------------------------------------------------------
+Secondfragment.java→            app → java → com.example.myapplication → SecondFragment.java (created)
+------------------------------------------------------------------------------------------------------
 @Override 
 public View onCreateView(LayoutInflater inflater, ViewGroup container, 
                          Bundle savedInstanceState) 
